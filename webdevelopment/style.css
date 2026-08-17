@@ -1,10 +1,497 @@
-.profile-image {
-    width: 180px;
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f3f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Navigation */
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    padding: 20px 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #80558f;
+}
+
+
+/* Home page */
+
+.home-page { 
+    min-height: 100vh; 
+ 
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+        url("background.jpg"); 
+ 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+ 
+    color: white; 
+} 
+ 
+.home-page .site-header { 
+    background: transparent; 
+    border: none; 
+} 
+ 
+.home-page .nav-links { 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 25px; 
+    list-style: none; 
+} 
+ 
+.home-page .nav-links a { 
+    color: white; 
+} 
+ 
+.home-page .nav-links a:hover, 
+.home-page .nav-links a.active { 
+    color: #ddd; 
+} 
+ 
+ 
+/* Profile layout */ 
+ 
+.home-page .profile { 
+    min-height: calc(100vh - 80px); 
+ 
+    max-width: 900px; 
+    margin: auto; 
+    padding: 60px 25px; 
+ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+ 
+    gap: 50px; 
+} 
+ 
+.home-page .profile-image img { 
+    width: 230px; 
+    height: 230px; 
+ 
+    object-fit: cover; 
+ 
+    border: 4px solid white; 
+} 
+ 
+.home-page .profile-text { 
+    max-width: 500px; 
+} 
+ 
+.home-page .section-label { 
+    color: white; 
+} 
+ 
+.home-page .profile-text h1 { 
+    font-size: 48px; 
+    margin: 8px 0; 
+} 
+ 
+.home-page .profile-text h2 { 
+    font-size: 22px; 
+    font-weight: normal; 
+    margin-bottom: 15px; 
+} 
+ 
+.home-page .profile-text p { 
+    margin-bottom: 10px; 
+} 
+ 
+.home-page .button { 
+    display: inline-block; 
+ 
+    margin-top: 15px; 
+    padding: 10px 18px; 
+ 
+    background: white; 
+    color: #333; 
+} 
+ 
+ 
+/* Mobile */ 
+ 
+@media (max-width: 700px) { 
+ 
+    .home-page .profile { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 25px; 
+    } 
+ 
+    .home-page .profile-image img { 
+        width: 180px; 
+        height: 180px; 
+    } 
+ 
+    .home-page .profile-text h1 { 
+        font-size: 36px; 
+    } 
+}
+
+
+/* Common page heading */
+
+.page-intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 50px 25px 30px;
+    text-align: center;
+}
+
+.page-intro h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.section-label {
+    color: #80558f;
+    font-weight: bold;
+}
+
+
+/* Projects */
+
+.project-table-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+}
+
+.project-table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.project-table-section caption {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.project-table-section th,
+.project-table-section td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.project-table-section th {
+    background: #e7deea;
+}
+
+
+/* Skills */
+
+.skills-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skills-heading h2 {
+    margin-top: 8px;
+}
+
+.skills-list {
+    background: white;
+    padding: 22px;
+    border: 1px solid #ddd;
+}
+
+.skills-list ul {
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.education-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 25px;
+}
+
+.education-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
+
+.education-section th,
+.education-section td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.education-section th {
+    background: #e7deea;
+}
+
+.education-section caption {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+
+/* Blog */
+
+.blog-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 25px;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-header p {
+    color: #80558f;
+    font-weight: bold;
+}
+
+.blog-header h1 {
+    margin: 8px 0;
+}
+
+.blog-header span {
+    color: #777;
+}
+
+.blog-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 30px;
+}
+
+.blog-text h2 {
+    margin: 15px 0 8px;
+}
+
+.blog-text p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.blog-date {
+    color: #80558f;
+    font-weight: bold;
+}
+
+.blog-photo img {
+    width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 50%;
+}
+
+.blog-photo p {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Contact */
+
+.contact {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+}
+
+.contact-form {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
     display: block;
-    margin: 0 auto 20px;
-    border: 5px solid white;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 18px;
+
+    background: #333;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #80558f;
+}
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+
+/* Site Report */
+
+.report {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+}
+
+.report-content {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+}
+
+.report-content h2 {
+    margin: 20px 0 8px;
+}
+
+.report-content p {
+    margin: 12px 0;
+    color: #555;
+}
+
+.report-image {
+    margin: 20px 0;
+}
+
+.report-image img {
+    width: 100%;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .project-table-section {
+        overflow-x: auto;
+    }
+
+    .project-table-section table {
+        min-width: 650px;
+    }
+
+    .skills-section,
+    .about,
+    .blog-card {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-photo {
+        order: -1;
+    }
+
+    .blog-photo img {
+        height: 200px;
+    }
+
+    .page-intro h1 {
+        font-size: 32px;
+    }
+
+    .report,
+    .contact,
+    .education-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
