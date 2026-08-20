@@ -17,25 +17,31 @@
 
         <nav class="navbar">
 
-            <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="menu-button">
-                ☰
-            </label>
-
             <ul class="nav-links">
 
-                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-                <li><a href="project.html">Projects</a></li>
+                <li>
+                    <a href="project.html">Projects</a>
+                </li>
 
-                <li><a href="skills.html">Skills</a></li>
+                <li>
+                    <a href="skills.html">Skills</a>
+                </li>
 
-                <li><a href="blog.html">Blog</a></li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
 
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li>
+                    <a href="contact.html" class="active">Contact</a>
+                </li>
 
-                <li><a href="sitereport.html">Site Report</a></li>
+                <li>
+                    <a href="sitereport.html">Site Report</a>
+                </li>
 
             </ul>
 
@@ -47,11 +53,16 @@
     <!-- Contact Page -->
     <main>
 
+        <!-- Page Introduction -->
         <section class="page-intro">
 
-            <p class="section-label">GET IN TOUCH</p>
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
 
-            <h1>Contact Me</h1>
+            <h1>
+                Contact Me
+            </h1>
 
             <p>
                 I would love to hear from you. Feel free to send me a message.
@@ -60,17 +71,19 @@
         </section>
 
 
+        <!-- Contact Form -->
         <section class="contact">
 
             <div class="contact-form">
 
-                <h2>Send Me a Message</h2>
+                <h2>
+                    Send Me a Message
+                </h2>
 
-                <form
-                    action="mailto:samiksharana6543@gmail.com"
-                    method="post"
-                    enctype="text/plain">
 
+                <form id="contact-form">
+
+                    <!-- First Name -->
                     <label for="first-name">
                         First Name
                     </label>
@@ -83,6 +96,7 @@
                         required>
 
 
+                    <!-- Last Name -->
                     <label for="last-name">
                         Last Name
                     </label>
@@ -95,6 +109,7 @@
                         required>
 
 
+                    <!-- Email -->
                     <label for="email">
                         Email
                     </label>
@@ -107,6 +122,7 @@
                         required>
 
 
+                    <!-- Message -->
                     <label for="message">
                         Message
                     </label>
@@ -118,6 +134,7 @@
                         required></textarea>
 
 
+                    <!-- Submit Button -->
                     <button type="submit">
                         Send Message
                     </button>
@@ -144,21 +161,26 @@
 
             </div>
 
+
             <div class="about-text">
 
                 <p>
                     <strong>Email:</strong>
+
                     <a href="mailto:samiksharana6543@gmail.com">
                         samiksharana6543@gmail.com
                     </a>
                 </p>
 
+
                 <p>
                     <strong>Phone:</strong>
+
                     <a href="tel:9807583338">
                         9807583338
                     </a>
                 </p>
+
 
                 <p>
                     <strong>Location:</strong>
@@ -184,6 +206,52 @@
         </p>
 
     </footer>
+
+
+    <!-- Gmail Contact Form Script -->
+    <script>
+
+        document
+            .getElementById("contact-form")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const firstName =
+                    document.getElementById("first-name").value;
+
+                const lastName =
+                    document.getElementById("last-name").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+                const message =
+                    document.getElementById("message").value;
+
+
+                const subject =
+                    "Message from Portfolio Contact Form";
+
+
+                const body =
+                    "Name: " + firstName + " " + lastName + "\n\n" +
+                    "Email: " + email + "\n\n" +
+                    "Message:\n" + message;
+
+
+                const gmailURL =
+                    "https://mail.google.com/mail/?view=cm&fs=1" +
+                    "&to=samiksharana6543@gmail.com" +
+                    "&su=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(body);
+
+
+                window.open(gmailURL, "_blank");
+
+            });
+
+    </script>
 
 </body>
 
