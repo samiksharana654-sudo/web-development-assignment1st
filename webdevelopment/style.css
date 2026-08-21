@@ -1,4 +1,4 @@
-/* General */
+
 
 * {
     margin: 0;
@@ -23,7 +23,7 @@ img {
 }
 
 
-/* Navigation */
+
 
 .site-header {
     background: white;
@@ -47,7 +47,7 @@ img {
 }
 
 
-/* Home page */
+
 
 .home-page {
     min-height: 100vh;
@@ -85,7 +85,7 @@ img {
 }
 
 
-/* Profile layout */
+
 
 .home-page .profile {
     min-height: calc(100vh - 80px);
@@ -200,7 +200,7 @@ img {
 }
 
 .projects-page .section-label {
-    color: #091366;
+    color: #030a47;
     font-weight: bold;
 }
 
