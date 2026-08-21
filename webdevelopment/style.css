@@ -49,119 +49,98 @@ img {
 
 /* Home page */
 
-.home-page { 
-    min-height: 100vh; 
- 
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-        url("background.jpg"); 
- 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
- 
-    color: white; 
-} 
- 
-.home-page .site-header { 
-    background: transparent; 
-    border: none; 
-} 
- 
-.home-page .nav-links { 
-    display: flex; 
-    justify-content: flex-end; 
-    gap: 25px; 
-    list-style: none; 
-} 
- 
-.home-page .nav-links a { 
-    color: white; 
-} 
- 
-.home-page .nav-links a:hover, 
-.home-page .nav-links a.active { 
-    color: #ddd; 
-} 
- 
- 
-/* Profile layout */ 
- 
-.home-page .profile { 
-    min-height: calc(100vh - 80px); 
- 
-    max-width: 900px; 
-    margin: auto; 
-    padding: 60px 25px; 
- 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
- 
-    gap: 50px; 
-} 
- 
-.home-page .profile-image img { 
-    width: 230px; 
-    height: 230px; 
- 
-    object-fit: cover; 
- 
-    border: 4px solid white; 
-} 
- 
-.home-page .profile-text { 
-    max-width: 500px; 
-} 
- 
-.home-page .section-label { 
-    color: white; 
-} 
- 
-.home-page .profile-text h1 { 
-    font-size: 48px; 
-    margin: 8px 0; 
-} 
- 
-.home-page .profile-text h2 { 
-    font-size: 22px; 
-    font-weight: normal; 
-    margin-bottom: 15px; 
-} 
- 
-.home-page .profile-text p { 
-    margin-bottom: 10px; 
-} 
- 
-.home-page .button { 
-    display: inline-block; 
- 
-    margin-top: 15px; 
-    padding: 10px 18px; 
- 
-    background: white; 
-    color: #333; 
-} 
- 
- 
-/* Mobile */ 
- 
-@media (max-width: 700px) { 
- 
-    .home-page .profile { 
-        flex-direction: column; 
-        text-align: center; 
-        gap: 25px; 
-    } 
- 
-    .home-page .profile-image img { 
-        width: 180px; 
-        height: 180px; 
-    } 
- 
-    .home-page .profile-text h1 { 
-        font-size: 36px; 
-    } 
+.home-page {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.home-page .site-header {
+    background: transparent;
+    border: none;
+}
+
+.home-page .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    list-style: none;
+}
+
+.home-page .nav-links a {
+    color: white;
+}
+
+.home-page .nav-links a:hover,
+.home-page .nav-links a.active {
+    color: #ddd;
+}
+
+
+/* Profile layout */
+
+.home-page .profile {
+    min-height: calc(100vh - 80px);
+
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+}
+
+.home-page .profile-image img {
+    width: 230px;
+    height: 230px;
+
+    object-fit: cover;
+
+    border: 4px solid white;
+}
+
+.home-page .profile-text {
+    max-width: 500px;
+}
+
+.home-page .section-label {
+    color: white;
+}
+
+.home-page .profile-text h1 {
+    font-size: 48px;
+    margin: 8px 0;
+}
+
+.home-page .profile-text h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.home-page .profile-text p {
+    margin-bottom: 10px;
+}
+
+.home-page .button {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 10px 18px;
+
+    background: white;
+    color: #333;
 }
 
 
@@ -185,12 +164,57 @@ img {
 }
 
 
-/* Projects */
+/* Projects page IdeaThon background */
+
+.projects-page .page-intro {
+    width: 100%;
+    max-width: none;
+
+    min-height: 430px;
+
+    margin: 0;
+    padding: 80px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.20),
+            rgba(255, 255, 255, 0.20)
+        ),
+        url(ideathon.jpeg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.projects-page .page-intro h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.projects-page .section-label {
+    color: #091366;
+    font-weight: bold;
+}
+
+
+/* Projects table */
 
 .project-table-section {
     max-width: 1000px;
     margin: auto;
     padding: 25px;
+}
+
+.project-table-section h2 {
+    margin-bottom: 15px;
 }
 
 .project-table-section table {
@@ -439,6 +463,14 @@ button:hover {
 
 .report-image img {
     width: 100%;
+    border: 1px solid #ddd;
+}
+
+.validation-caption {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #80558f;
+    font-weight: bold;
 }
 
 
@@ -491,6 +523,41 @@ button:hover {
     .report,
     .contact,
     .education-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* Home page mobile */
+
+    .home-page .profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .home-page .profile-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .home-page .profile-text h1 {
+        font-size: 36px;
+    }
+
+
+    /* Projects page mobile */
+
+    .projects-page .page-intro {
+        min-height: 350px;
+        padding: 60px 20px;
+    }
+
+    .projects-page .page-intro h1 {
+        font-size: 32px;
+    }
+
+    .project-table-section {
         padding-left: 20px;
         padding-right: 20px;
     }
